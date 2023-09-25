@@ -1,8 +1,9 @@
-<div id="htmlContent">
 <html>
 <head>
+<div id="htmlContent">
 <title>Resume</title>
 </head>
+<body>
 <style>
 table,th,td
 {
@@ -108,26 +109,25 @@ front-size: 18px;
 <p class="head"><h3><b>Date:</b></h3></p>
 <p class="head"><h3><b>Place:</b></h3></p> <h3><center><b>Signture</b></center></h3>
 </body>
-</html>
 </div>
+<br>
 <center>
-<button onclick="printDiv('htmlcontent')">Print / Save Pdf</button>
+<button onclick="printDiv('htmlContent')">Print / Save Pdf</button>
 </center>
 <script type="text/javascript">
 
-      function printDiv(div_id) 
-    	{
-    	 
+      function printDiv(div_id)
+        {
           var divToPrint=document.getElementById(div_id);
-    	  var newWin=window.open('','Print-Window');
-    	  newWin.document.open();
-    	  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
-    	  newWin.document.close();
-    	  setTimeout(function() { newWin.close();},10);
-    	}
+          var newWin=window.open('','Print-Window');
+          newWin.document.open();
+          newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+          newWin.document.close();
+          setTimeout(function() { newWin.close();},10);
+        }
 </script>
-</body>
 </html>
+
 
   
 	
